@@ -1,19 +1,24 @@
 {
-  "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "declaration": true,
-    "exactOptionalPropertyTypes": true,
-    "isolatedDeclarations": true,
-    "lib": ["ESNext", "DOM"],
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2020",
-  },
-  "tstl": {
-    "buildMode": "library"
-  },
-  "include": ["src"]
+	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"declaration": true,
+		"exactOptionalPropertyTypes": true,
+		"isolatedDeclarations": true,
+		"lib": ["ESNext", "DOM"],
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ESNext"
+	},
+	"$schema": "https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/tsconfig-schema.json",
+	"tstl": {
+		"buildMode": "library",
+		"luaTarget": "5.1",
+		"luaLibImport": "require-minimal",
+		// "luaBundle": "dist/index.lua",
+		// "luaBundleEntry": "src/index.ts",
+		"tstlVerbose": true
+	},
+	"include": ["src"]
 }
